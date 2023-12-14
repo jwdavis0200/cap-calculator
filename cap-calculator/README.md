@@ -1,8 +1,8 @@
-# React + Vite
+# Cap Calculator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This Project was done in a few hours to refresh my foundation in ReactJS and also in anticipation for results day.
 
-Currently, two official plugins are available:
+I know there are many sites that provide this service but I like to use things that I made myself (plus there are no
+annoying ads).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Feel free to visit the website. Cheers!
