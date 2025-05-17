@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.scss";
 import SubjectCard, { SubjectProps } from "./components/SubjectCard";
 import ListHeader from "./components/ListHeader";
@@ -38,6 +38,18 @@ function App() {
         )
       );
     };
+
+  const handleAdd = () => {
+    setSubjects((prevSubjects) => [...prevSubjects, { mc: "0", grade: "0" }]);
+  };
+
+  const handleDelete = () => {
+    setSubjects((prevSubjects) => {
+      if (prevSubjects.length === 0) return prevSubjects;
+      const updatedSubjects = prevSubjects.slice(0, -1);
+      return updatedSubjects;
+    });
+  };
 
   const handleSubmit = () => {
     const initialValue: totalGrade = { mcTotal: 0, wGradesTotal: 0 };
@@ -97,6 +109,12 @@ function App() {
         {" "}
         <button id="submit-btn" onClick={handleSubmit}>
           Calculate new cGPA
+        </button>
+        <button id="add-subject-card-btn" onClick={handleAdd}>
+          Add More Courses
+        </button>
+        <button id="remove-subject-card-btn" onClick={handleDelete}>
+          Delete Last Course
         </button>
         <input type="text" value={newcGPA} disabled />
       </div>
